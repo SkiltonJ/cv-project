@@ -21,8 +21,11 @@ class Experience extends Component {
   }
 
   handleChange = (e) => {
-    e.preventDefault()
+    const {name, value} = e.target
 
+    this.setState({
+      default: {...this.state.default, [name]: value}
+    })
   }
 
   render(){
@@ -40,7 +43,7 @@ class Experience extends Component {
               name='company'
               placeholder="Web Developer"
               value={this.state.default.company}
-              onClick={handleChange}
+              onChange={handleChange}
             />
           </div>
         </form>
