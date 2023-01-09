@@ -42,3 +42,7 @@ main {
 	background: #EAEDED;
 	border-radius: 10px;
 }
+
+.hidden {
+  display: none;
+}
