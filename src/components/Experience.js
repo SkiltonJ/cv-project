@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import uniqid from 'uniqid';
+import JobItem from "./JobItem";
 
 class Experience extends Component {
   constructor() {
@@ -61,14 +62,27 @@ class Experience extends Component {
     this.toggleForm();
   }
 
-  render(){
-    const hiddenForm = this.state.activeForm ? "experience-form" : "experience-form hidden"
-    const hiddenButton = this.state.activeButton ? "add-item" : "add-item hidden"
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.setState({
+      jobs: [...this.state.jobs, this.state.default]
+    });
+    this.resetForm();
+    this.toggleForm();
+  }
 
+  render(){
+    let hiddenForm = this.state.activeForm ? "experience-form" : "experience-form hidden"
+    let hiddenButton = this.state.activeButton ? "add-item" : "add-item hidden"
+
+    const displayJobs = this.state.jobs.map((job) => {
+      return <JobItem data={job} key={job.id} />
+    })
     return(
       <div className='experience'>
         <h3>Work Experience</h3>
-        <form className={hiddenForm}>
+        {displayJobs}
+        <form className={hiddenForm} onSubmit={this.handleSubmit}>
           <div className="role">
             <label>Job Title</label>
             <input
