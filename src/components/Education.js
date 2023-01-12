@@ -119,7 +119,7 @@ class Education extends Component {
                 value={this.state.default.qualification}
               />
             </div>
-            <div className="form buttons">
+            <div className="buttons">
               <button className="submit">Save</button>
               <button className="cancel" onClick={this.handleCancel}>Cancel</button>
             </div>
