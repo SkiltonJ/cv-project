@@ -11,4 +11,59 @@ class EditableLabel extends Component {
       default: props.value
     }
   }
+
+  handleClick = () => {
+    this.setState({
+      text: this.state.text,
+      isEditing: true
+    })
+  }
+
+  save = (props) => {
+    this.setState({
+      text: this.state.text,
+      isEditing: false
+    });
+
+    if (this.state.text === ''){
+      this.setState({
+        text: this.state.default
+      });
+    }
+  }
+
+  handleBlur = () => {
+    this.save();
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      text: e.target.value
+    });
+  }
+
+  enter = (e) => {
+    if(e.keyCode === 13){
+      this.save();
+    }
+  }
+
+  render(){
+    return(
+      this.state.isEditing ?
+
+      <input
+        type='text'
+        value={this.state.text}
+        autoFocus={true}
+        onBlur={this.handleBlur}
+        onChange={this.handleChange}
+        onKeyDown={this.enter}
+      />
+      :
+      <this.state.tag onClick={this.handleClick}>{this.state.text}</this.state.tag>
+    );
+  }
 }
+
+export default EditableLabel;

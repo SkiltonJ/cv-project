@@ -54,7 +54,7 @@ class Education extends Component {
     this.resetForm()
   }
 
-  handleAdd = (e) => {
+  handleAdd = () => {
     this.toggleForm()
   }
 

@@ -1,29 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
+import EditableLabel from "./EditableLabel";
 
-class Personal extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
+const Personal = () => {
+  return (
+    <div className="flex">
+        <div className="">
+          <EditableLabel value='First Name' tag='h1' />
+          <EditableLabel value='Last Name' tag='h1' />
+          <EditableLabel value='Occupation' tag='h4' />
+          <EditableLabel value='Email' tag='h4' />
+        </div>
 
-    }
-  }
-
-  render() {
-    return (
-      <div>
-        <form>
-          <div className="flex-col">
-            <input placeholder="First Name" type='text'></input>
-            <input placeholder="Last Name" type='text'></input>
-            <input placeholder="Occupation" type='text'></input>
-            <input placeholder="Email" type='text'></input>
-          </div>
-
-
-        </form>
-      </div>
-    )
-  }
+        <div className="">
+          <EditableLabel value='Address line 1' tag='p' />
+          <EditableLabel value='Address line 2' tag='p' />
+          <EditableLabel value='Town/City' tag='p' />
+          <EditableLabel value='Country' tag='p' />
+          <EditableLabel value='Postcode' tag='p' />
+        </div>
+    </div>
+  )
 }
 
 export default Personal;
