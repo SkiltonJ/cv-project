@@ -16,7 +16,7 @@ class EditableLabel extends Component {
     this.setState({
       text: this.state.text,
       isEditing: true
-    })
+    });
   }
 
   save = (props) => {
