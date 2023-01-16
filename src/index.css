@@ -43,7 +43,6 @@ main {
 	margin-bottom: 20px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	width: 75%;
 	background: #EAEDED;
 	border-radius: 10px;
