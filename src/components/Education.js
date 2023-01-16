@@ -80,44 +80,60 @@ class Education extends Component {
 
         <form className={hiddenForm} onSubmit={this.handleSubmit}>
           <div className="form">
-            <label for="school">Educational Institute</label>
-            <input
-              type='text'
-              name='school'
-              placeholder='Enter Here'
-              onChange={this.handleChange}
-              value={this.state.default.school}
-              />
-            </div>
-            <div className="">
-              <label for='from'>From:</label>
-              <input
-                type='text'
-                name='from'
-                placeholder="YYYY"
-                onChange={this.handleChange}
-                value={this.state.default.from}
-              />
-            </div>
-            <div className="">
-              <label for='to'>To:</label>
-              <input
-                type='text'
-                name='to'
-                placeholder="YYYY"
-                onChange={this.handleChange}
-                value={this.state.default.to}
-              />
+            <div>
+              <label for="school">Educational Institute</label>
             </div>
             <div>
+              <input
+                type='text'
+                name='school'
+                placeholder='Enter Here'
+                onChange={this.handleChange}
+                value={this.state.default.school}
+              />
+              </div>
+            </div>
+            <div className="">
+              <div>
+                <label for='from'>From:</label>
+              </div>
+              <div>
+                <input
+                  type='text'
+                  name='from'
+                  placeholder="YYYY"
+                  onChange={this.handleChange}
+                  value={this.state.default.from}
+                />
+              </div>
+            </div>
+            <div className="">
+              <div>
+                <label for='to'>To:</label>
+              </div>
+              <div>
+                <input
+                  type='text'
+                  name='to'
+                  placeholder="YYYY"
+                  onChange={this.handleChange}
+                  value={this.state.default.to}
+                />
+              </div>
+            </div>
+            <div>
+            <div>
               <labal for='qualification'>Qualification/Degree</labal>
+            </div>
+            <div>
               <input
                 type='text'
                 name='qualification'
                 placeholder='Bacehlor of Science'
                 onChange={this.handleChange}
                 value={this.state.default.qualification}
-              />
+                />
+            </div>
             </div>
             <div className="buttons">
               <button className="submit">Save</button>

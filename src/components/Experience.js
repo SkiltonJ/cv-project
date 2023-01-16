@@ -84,62 +84,86 @@ class Experience extends Component {
         {displayJobs}
         <form className={hiddenForm} onSubmit={this.handleSubmit}>
           <div className="role">
-            <label>Job Title</label>
-            <input
-              type='text'
-              name='role'
-              placeholder="Web Developer"
-              value={this.state.default.role}
-              onChange={this.handleChange}
-            />
+            <div>
+              <label>Job Title</label>
+            </div>
+            <div>
+              <input
+                type='text'
+                name='role'
+                placeholder="Web Developer"
+                value={this.state.default.role}
+                onChange={this.handleChange}
+              />
+            </div>
           </div>
           <div className="company">
-            <label>Company</label>
-            <input
-              type='text'
-              name='company'
-              value={this.state.default.company}
-              onChange={this.handleChange}
-            />
+            <div>
+              <label>Company</label>
+            </div>
+            <div>
+              <input
+                type='text'
+                name='company'
+                value={this.state.default.company}
+                onChange={this.handleChange}
+              />
+            </div>
           </div>
           <div className="from">
-            <label>From</label>
-            <input
-              type='text'
-              name='from'
-              placeholder='YYYY'
-              value={this.state.default.from}
-              onChange={this.handleChange}
-            />
+            <div>
+              <label>From</label>
+            </div>
+            <div>
+              <input
+                type='text'
+                name='from'
+                placeholder='YYYY'
+                value={this.state.default.from}
+                onChange={this.handleChange}
+              />
+            </div>
           </div>
           <div className="to">
-            <label>To</label>
-            <input
-              type='text'
-              name='to'
-              placeholder='YYYY'
-              value={this.state.default.to}
-              onChange={this.handleChange}
-            />
+            <div>
+              <label>To</label>
+            </div>
+            <div>
+              <input
+                type='text'
+                name='to'
+                placeholder='YYYY'
+                value={this.state.default.to}
+                onChange={this.handleChange}
+              />
+            </div>
           </div>
           <div>
-            <label>City</label>
-            <input
-              type='text'
-              name='city'
-              value={this.state.default.city}
-              onChange={this.handleChange}
-            />
+            <div>
+              <label>City</label>
+            </div>
+            <div>
+              <input
+                type='text'
+                name='city'
+                value={this.state.default.city}
+                onChange={this.handleChange}
+              />
+            </div>
           </div>
           <div>
-            <label>Description</label><br/>
-            <textarea rows='4' cols='50'
-              type='text'
-              name='description'
-              placeholder="Describe your role and achievements in that role here..."
-              value={this.state.default.description}
-              onChange={this.handleChange}
-            />
+            <div>
+              <label>Description</label><br/>
+            </div>
+            <div>
+              <textarea rows='4' cols='50'
+                type='text'
+                name='description'
+                placeholder="Describe your role and achievements in that role here..."
+                value={this.state.default.description}
+                onChange={this.handleChange}
+              />
+            </div>
           </div>
           <div className="buttons">
             <button className="submit">Save</button>

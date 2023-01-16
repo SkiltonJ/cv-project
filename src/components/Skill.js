@@ -62,7 +62,7 @@ class Skill extends Component {
       return <div><SkillItem skill={skill} key={uniqid()}/></div>
     });
     return(
-      <div>
+      <div className='skill'>
         <h3>Skills</h3>
         <div>
           {displaySkills}
@@ -70,13 +70,17 @@ class Skill extends Component {
 
         <form className={hiddenForm} onSubmit={this.handleSubmit}>
           <div>
-            <label>Add a skill</label>
-            <input
-              name='skill'
-              type='text'
-              value={this.state.skill}
-              onChange={this.handleChange}
-            />
+            <div>
+              <label>Add a skill</label>
+            </div>
+            <div>
+              <input
+                name='skill'
+                type='text'
+                value={this.state.skill}
+                onChange={this.handleChange}
+              />
+            </div>
           </div>
           <div className='buttons'>
             <button>Save</button>
