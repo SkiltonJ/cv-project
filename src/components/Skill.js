@@ -54,12 +54,21 @@ class Skill extends Component {
     this.toggleForm();
   }
 
+  handleDelete = (id) => {
+    const filteredSkills = this.state.skills.filter((skill) => {
+      return skill !== id
+    });
+    this.setState({
+      skills: filteredSkills
+    });
+  }
+
   render(){
     let hiddenButton = this.state.activeButton ? 'button' : 'button hidden'
     let hiddenForm = this.state.activeForm ? 'skill-form' : 'skill-form hidden'
 
     const displaySkills = this.state.skills.map((skill) => {
-      return <div><SkillItem skill={skill} key={uniqid()}/></div>
+      return <div><SkillItem skill={skill} key={uniqid()} handleDelete={this.handleDelete}/></div>
     });
     return(
       <div className='skill'>
