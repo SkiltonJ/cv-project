@@ -71,12 +71,21 @@ class Experience extends Component {
     this.toggleForm();
   }
 
+  handleDelete = (id) => {
+    const filteredJobs = this.state.jobs.filter((job) => {
+      return job !== id
+    });
+    this.setState({
+      jobs: filteredJobs
+    });
+  }
+
   render(){
     let hiddenForm = this.state.activeForm ? "experience-form" : "experience-form hidden"
     let hiddenButton = this.state.activeButton ? "add-item" : "add-item hidden"
 
     const displayJobs = this.state.jobs.map((job) => {
-      return <JobItem data={job} key={job.id} />
+      return <JobItem data={job} key={job.id} handleDelete={this.handleDelete}/>
     })
     return(
       <div className='experience'>

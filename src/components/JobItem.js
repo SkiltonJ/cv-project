@@ -11,6 +11,9 @@ const JobItem = (props) => {
       <div>
         <p>{props.data.description}</p>
       </div>
+      <div className='delete-button'>
+        <button onClick={() => {props.handleDelete(props.job)}}>Delete</button>
+      </div>
     </div>
   )
 }
