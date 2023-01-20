@@ -73,7 +73,7 @@ class Experience extends Component {
 
   handleDelete = (id) => {
     const filteredJobs = this.state.jobs.filter((job) => {
-      return job !== id
+      return job.id !== id
     });
     this.setState({
       jobs: filteredJobs
