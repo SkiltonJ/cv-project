@@ -10,6 +10,9 @@ const QualItem = (props) => {
       <div className="qual-details">
         <p>Qualification: {props.data.qualification}</p>
       </div>
+      <div className='delete-button'>
+        <button onClick={() => {props.handleDelete(props.data.id)}}>Delete</button>
+      </div>
     </div>
   )
 }
