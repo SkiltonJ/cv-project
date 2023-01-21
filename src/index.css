@@ -87,3 +87,7 @@ input {
 .experience:last-child {
   margin-bottom: 1em;
 }
+.education, .personal, .experience {
+  border-bottom: 1px solid rgb(54, 54, 54);
+  padding-bottom: 1em;
+}

@@ -3,7 +3,7 @@ import EditableLabel from "./EditableLabel";
 
 const Personal = () => {
   return (
-    <div className="flex">
+    <div className="flex personal">
         <div className="personal-left">
           <EditableLabel value='First Name' tag='h1' />
           <EditableLabel value='Last Name' tag='h1' />
