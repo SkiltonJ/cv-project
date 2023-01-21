@@ -14,7 +14,7 @@ class EditableLabel extends Component {
 
   handleClick = () => {
     this.setState({
-      text: this.state.text,
+      text: '',
       isEditing: true
     });
   }
